@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sen', sans-serif;
+}
+body
+{
+    width: 100%;
+    height: 100vh;
+    background: rgb(56,97,140);
+    background: linear-gradient(210deg, rgba(56,97,140,1) 0%, rgba(56,97,140,1) 50%, rgba(53,167,255,1) 50%, rgba(53,167,255,1) 100%);
+}
+header
+{
+    height: 10vh;
+    background-color: #ff5252;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo
+{
+    margin-left: 60px;
+    font-size: 2rem;
+    color: white;
+}
+header .menu
+{
+    display: flex;
+    margin-right: 60px;
+}
+header .menu form
+{
+    margin: 0 30px;
+}
+header .menu form input[type='submit']
+{
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    font-size: 1rem;
+    border: none;
+}
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+}
+main h2
+{
+    font-size: 4rem;
+}
+.main-register
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-register .main-card
+{
+    position: relative;
+    width: 750px;
+    padding: 60px 0 100px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+.main-register .main-card-login
+{
+    height: 450px;
+}
+.main-register .main-card-registration
+{
+    height: 600px;
+}
+.main-register .main-card h2
+{
+    text-align: center;
+    font-size: 3rem;
+    color: #38618c;
+    margin: 0 0 30px 0;
+}
+.main-register form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-register form input
+{
+    padding: 0 20px;
+    margin: 10px 0;
+    width: 500px;
+    height: 60px;
+    border: 2px solid #35a7ff;
+    border-radius: 5px;
+    color: #38618c;
+    outline: none;
+    font-weight: 900;
+}
+.main-register form button
+{
+    outline: none;
+    cursor: pointer;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    color: #38618c;
+    font-size: .8rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-weight: 900;
+}
+.main-register form button i
+{
+    font-size: 1.4rem;
+    margin-left: 5px;
+}
+form p
+{
+    margin: 10px 0;
+}
+.error-msg
+{
+    text-align: center;
+    color: #ff5252;
+}
+.success-msg
+{
+    text-align: center;
+    color: #1dd1a1;
+}

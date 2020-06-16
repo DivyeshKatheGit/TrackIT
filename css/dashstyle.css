@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Sen', sans-serif;
+}
+body
+{
+    width: 100%;
+    height: 100vh;
+}
+.main-sec
+{
+    display: flex;
+}
+.menusec
+{
+    padding-top: 20px;
+    padding-left: 45px;
+    width: 8%;
+    height: 100vh;
+    transition: .5s;
+}
+.menusec.active
+{
+    width: 20%;
+}
+.menusec .burger-menu
+{
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.menusec .burger-menu .line
+{
+    width: 40px;
+    height: 3px;
+    background-color: #358FDB;
+    margin: 6px 0px;
+    transition: .8s;
+}
+.menusec .burger-menu .line-1,
+.menusec .burger-menu .line-3
+{
+    width: 20px;
+}
+.menusec .burger-menu .line-1
+{
+    margin-left: 20px;
+}
+.menusec .menu-list-active
+{
+    width: 100%;
+    display: flex;
+}
+.menusec .menu-list-active .menu-item .list-text
+{
+    display: none;
+}
+.menusec .menu-item
+{
+    width: 85%;
+    color: #38618c;
+    font-weight: 700;
+    list-style: none;
+    margin: 40px 0;
+    font-size: 1.1rem;
+    padding: 20px 10px;
+    cursor: pointer;
+}
+.menu-icons .menu-item
+{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.menu-item i
+{
+    width: 30px;
+}
+.menu-item a
+{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.menu-item p
+{
+    width: 120px;
+    color: #38618c;
+    font-size: 1rem;
+}
+.menu-item .fa-home
+{
+    color: #ffe74c;
+}
+.menu-item .fa-calendar-check
+{
+    color: #35a7ff;
+}
+.menu-item .fa-cog
+{
+    color: #888888;
+}
+.menu-item .fa-comment-alt
+{
+    color: #ff5964;
+}
+.menusec .menu-item:hover
+{
+    transform: scale(1.1);
+    transition: .8s;
+}
+.menusec .menu-item .fas,
+.menusec .menu-item .far
+{
+    margin-right: 20px;
+}
+.board
+{
+    width: 100%;
+}
+.board-head
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: #38618c;
+    color: #ffffff;
+}
+.board-head h2
+{
+    margin-left: 20px;
+}
+.board-head h3
+{
+    margin-right: 40px;
+}
+.subject-date
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+.date
+{
+    margin-right: 50px;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #35a7ff;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: #38618c;
+    font-weight: 700;
+}
+.subjectAdd .sub-input
+{
+    border: 3px solid #35a7ff;
+    width: 500px;
+    border-radius: 10px;
+    padding: 10px 0px 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+::placeholder
+{
+    color: #38618c;
+}
+.subjectAdd input
+{
+    width : 300px;
+    height : 40px;
+    padding: 10px 10px;
+    font-weight: 700;
+    color: #38618c;
+    font-size: 1.2rem;
+    border: none;
+}
+.subjectAdd button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #35a7ff;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+}
+.subjectAdd button i
+{
+    font-size: 1rem;
+    color: black;
+}
+.subject-cards
+{
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+}
+.card
+{
+    background-color: #38618c;
+    width: 350px;
+    height: 240px;
+    border-radius: 10px;
+    margin: 0 30px;
+    padding: 30px 20px 15px 35px;
+}
+.subject
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subject .sub-name
+{
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    display: inline-block;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #35a7ff;
+}
+.subject .history
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.history .mark
+{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff5964;
+    margin: 0 1px;
+}
+.attendance-count
+{
+    color: #35a7ff;
+    font-weight: 700;
+}
+.attendance-count .attended
+{
+    margin-left: 10px;
+}
+.attendance-count .attended,
+.attendance-count .slash,
+.attendance-count .total
+{
+    font-size: 1.2rem;
+}
+.display
+{
+    display: flex;
+    margin-top: 10px;
+}
+.percentage
+{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-left: -10px;
+}
+.percentage svg
+{
+    width: 80px;
+    height: 80px;
+    transform: rotate(-90deg);
+}
+.percentage svg circle
+{
+    fill: none;
+    /*stroke: #ff5964;*/
+    stroke-width: 5px;
+    stroke-dasharray: 190;
+}
+.percentage .text
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.percentage .text span
+{
+    font-size: .7rem;
+}
+.btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.btn .sub
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1.5px solid #ffffff;
+}
+.display .undo-form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-left: 80px;
+}
+.display .undo-form .undo
+{
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    line-height: 80px;
+}
+.sub.sub-right
+{
+    background-color: #14c620;
+}
+.sub.sub-wrong
+{
+    background-color: #ff5964;
+}
+.error-msg
+{
+    font-weight: 700;
+    color: #ff5252;
+}
+.success-msg
+{
+    font-weight: 700;
+    color: #14c620;
+}
+/*feedback style*/
+
+.board-main h2
+{
+    color: #38618c;
+    margin: 20px 0 30px;
+}
+.board-main form
+{
+    display: flex;
+    flex-direction: column;
+}
+.board-main form textarea
+{
+    padding: 10px 5px;
+    width: 700px;
+    margin: 10px 0 30px;
+}
+.board-main form input
+{
+    padding: 10px 5px;
+    width: 700px;
+    height: 50px;
+    margin: 10px 0 30px;
+}
+.board-main form button
+{
+    width: 200px;
+    height: 40px;
+    font-size: .8rem;
+    background-color: #35a7ff;
+    border: none;
+    color: #ffffff;
+}
+
+/*settings style */
+.board-settings
+{
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-between;
+}
+.edit-subjects
+{
+    width: 50%;
+}
+.edit-subjects h1
+{
+    color: #38618c;
+}
+.subject-card
+{
+    width: 500px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #35a7ff;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+.subject-card .options
+{
+    display: flex;
+    margin-right: 20px;
+}
+.subject-card h2
+{
+    margin-left: 30px;
+    font-weight: 900;
+    color: #38618c;
+}
+.subject-card .options button
+{
+    margin: 0 15px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+}
+.subject-card .options #edit
+{
+    color: #14c620;
+}
+.subject-card .options #delete
+{
+    color: #ff5964;
+}
+
+.edit-criteria
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.edit-criteria .circle
+{
+    position: relative;
+}
+.edit-criteria h2
+{
+    color: #38618C;
+}
+.edit-criteria svg
+{
+    width: 500px;
+    height: 400px;
+    transform: rotate(-90deg);
+}
+.edit-criteria svg circle
+{
+    fill: none;
+    stroke: #38618C;
+    stroke-width: 20px;
+    stroke-linecap: round;
+}
+.edit-criteria svg #c2
+{
+    stroke: #ff5252;
+    stroke-width: 15px;
+    stroke-linecap: round;
+    stroke-dasharray: calc(1070);
+    stroke-dashoffset: calc(1070 - (1070*70)/100);
+}
+.edit-criteria .percent
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 100px;
+    color: #38618C;
+}
+.edit-criteria h2 span
+{
+    font-size: 60px;
+}
+.edit-criteria form
+{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 20px;
+    align-items: center;
+}
+.edit-criteria form input[type='range']
+{
+    width: 100%;
+    height: 12px;
+    background-color: #ff5252;
+    border-radius: 10px;
+    -webkit-appearance: none;
+    z-index: 10;
+}
+.edit-criteria form input[type='range']::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    background: #38618c;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.edit-criteria form button
+{
+    margin-top: 30px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #38618c;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+}
+
+/*editsubject style */
+
+.main-form
+{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(210deg, rgba(56,97,140,1) 0%, rgba(56,97,140,1) 50%, rgba(53,167,255,1) 50%, rgba(53,167,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-form form
+{
+    background-color: #ffffff;
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-form form .input-field
+{
+    margin: 10px 0;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+}
+.main-form form .input-field label
+{
+    width: 200px;
+    color: #38618c;
+    font-weight: 700;
+}
+.main-form form .input-field input
+{
+    height: 35px;
+    width: 250px;
+    border: 2px solid #35a7ff;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.main-form form button
+{
+    width: 150px;
+    height: 40px;
+    background-color: #38618c;
+    border: none;
+    color: #ffffff;
+    font-size: .8rem;
+    font-weight: 700;
+    margin-top: 30px;
+}
